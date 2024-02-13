@@ -1,4 +1,4 @@
 package com.jobhub.controller;
 
-public class JobController {
+public class ExecutorController {
 }
