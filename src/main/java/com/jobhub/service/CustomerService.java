@@ -2,15 +2,20 @@ package com.jobhub.service;
 
 import com.jobhub.dao.CustomerDAO;
 import com.jobhub.model.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CustomerService {
-    private CustomerDAO customerDAO;
+    private final CustomerDAO customerDAO;
 
-    public CustomerService() {
-        this.customerDAO = new CustomerDAO();
+    @Autowired
+    public CustomerService(CustomerDAO customerDAO) {
+        this.customerDAO = customerDAO;
     }
+
     // Добавление нового заказчика
     public boolean addCustomer(Customer customer) {
         return customerDAO.addCustomer(customer);

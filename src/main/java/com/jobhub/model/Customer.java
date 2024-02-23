@@ -5,7 +5,7 @@ public class Customer {
     private String name;
     private String email;
 
-    // Конструкторы
+
     public Customer() { }
 
     public Customer(String name, String email) {
@@ -19,7 +19,6 @@ public class Customer {
         this.email = email;
     }
 
-    // Геттеры и сеттеры
     public int getId() {
         return id;
     }
